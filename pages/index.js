@@ -38,6 +38,7 @@ export function App({ colores }) {
       {modoOscuro && (
         <style global jsx>{`
           body {
+            transition: background-color, color 0.3s ease;
             background-color: black;
             color: white;
           }
