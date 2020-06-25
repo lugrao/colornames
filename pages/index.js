@@ -6,7 +6,7 @@ export function App({ colores }) {
       <h3>cien colores random nombrados por gente random</h3>
       <div className="texto">
         <p className="recargar">
-          <i>recargá la página para ir viendo los nuevos colores</i>
+          <i><a href="https://colornames-feed.vercel.app/">recargá</a> la página para ir viendo los nuevos colores</i>
         </p>
         <p className="colornames-org">
           visitá <a href="https://colornames.org/">colornames.org</a>
