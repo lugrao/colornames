@@ -1,5 +1,5 @@
 body {
-    transition: background-color, color 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 img {
@@ -8,6 +8,14 @@ img {
   right: 7px;
   top: 7px;
   position: fixed;
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+a:visited {
+  transition: color 0.2s ease;
 }
 
 .contenedor {
