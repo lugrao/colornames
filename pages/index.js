@@ -1,29 +1,54 @@
 import Layout from "../components/Layout";
+import { useState } from "react";
 
 export function App({ colores }) {
+  const [modoOscuro, setModoOscuro] = useState(false);
+
+  function manejarClick() {
+    setModoOscuro(!modoOscuro);
+  }
+
   return (
     <Layout>
-      <h3>cien colores random nombrados por gente random</h3>
-      <div className="texto">
-        <p className="recargar">
-          <i><a href="https://colornames-feed.vercel.app/">recargá</a> la página para ir viendo los nuevos colores</i>
-        </p>
-        <p className="colornames-org">
-          visitá <a href="https://colornames.org/">colornames.org</a>
-        </p>
-      </div>
+      <img onClick={manejarClick} src={modoOscuro ? "/sol.svg" : "/luna.svg"} />
+      <div className="contenedor">
+        <header>
+          <h2>cien colores random nombrados por gente random</h2>
+          <p>
+            <a href="https://colornames-feed.vercel.app/">recargá</a> la página
+            para ir viendo los nuevos colores
+          </p>
+          <p>
+            visitá <a href="https://colornames.org/">colornames.org</a>
+          </p>
+        </header>
 
-      {colores.map((color) => {
-        return (
-          <div className="color">
-            <p className="color-name">{color.name}</p>
-            <div
-              className="color-hex"
-              style={{ backgroundColor: "#" + color.hexCode }}
-            ></div>
-          </div>
-        );
-      })}
+        {colores.map((color) => {
+          return (
+            <div className="color">
+              <p className="color-name">{color.name}</p>
+              <div
+                className="color-hex"
+                style={{ backgroundColor: "#" + color.hexCode }}
+              ></div>
+            </div>
+          );
+        })}
+      </div>
+      {modoOscuro && (
+        <style global jsx>{`
+          body {
+            background-color: black;
+            color: white;
+          }
+          a {
+            color: greenyellow;
+          }
+          a:visited {
+            color: green;
+          }
+        `}</style>
+      )}
     </Layout>
   );
 }

@@ -1,64 +1,43 @@
-h3 {
-  text-align: center;
+img {
+  width: 20px;
+  height: 20px;
+  right: 7px;
+  top: 7px;
+  position: fixed;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  width: 98%;
+  max-width: 650px;
+  margin: 25px auto;
+}
+
+header {
+  justify-self: start;
+  padding-bottom: 30px;
+}
+header p {
+  font-size: 13px;
+  font-style: italic;
 }
 
 .color {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  padding: 0 5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.5fr;
+  padding: 20px 0;
+  width: 100%;
 }
 
-.texto {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding: 0 2rem;
-}
-
-.colornames-org {
-  justify-self: end;
-  font-size: 13px;
-}
-
-.recargar {
-  font-size: 13px;
-  justify-self: start;
+.color-name {
+  margin: 0 0 7px;
 }
 
 .color-hex {
   justify-self: start;
-  height: 20px;
-  width: 90%;
-  background-color: grey;
-}
-
-@media (max-width: 700px) {
-  .texto {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-    padding: 0 1rem;
-  }
-  
-  .recargar,
-  .colornames-org {
-    justify-self: center;
-  }
-
-  .color {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    padding: 1rem 1rem;
-  }
-  .color-hex {
-    justify-self: center;
-    align-self: start;
-    height: 20px;
-    width: 90%;
-    background-color: grey;
-  }
+  height: 100%;
+  width: 100%;
 }
