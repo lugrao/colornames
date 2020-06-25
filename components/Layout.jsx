@@ -18,6 +18,8 @@ export default function Layout({ children }) {
           property="og:image:secure_url"
           content="https://upload.wikimedia.org/wikipedia/commons/b/b4/Seven-colors_%28visible_spectrum%29_vector.svg"
         />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
         <link rel="icon" href="/rueda-de-colores.svg" />
       </Head>
       <main id="main">{children}</main>
