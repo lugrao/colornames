@@ -1,0 +1,24 @@
+
+
+.color {
+    display:grid;
+grid-template-columns: 1fr 1fr;
+justify-items: center;
+align-items: center;
+padding: 0 5rem;
+}
+
+.color-name {
+
+}
+
+.color-hex {
+    justify-self: start;
+    height: 20px;
+    width: 50%;
+    background-color: grey;
+}
+
+.recargar {
+    font-size: 12px;
+}
