@@ -1,14 +1,17 @@
 import Layout from "../components/Layout";
-import { useState } from "react";
-
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export function App({ colores }) {
-  console.log(colores);
-
   return (
     <Layout>
-            <p className="recargar"><i>recargá la página para ir viendo los nuevos colores</i></p>
+      <div className="texto">
+        <p className="recargar">
+          <i>recargá la página para ir viendo los nuevos colores</i>
+        </p>
+        <p className="colornames-org">
+          visitá <a href="https://colornames.org/">colornames.org</a>
+        </p>
+      </div>
+
       {colores.map((color) => {
         return (
           <div className="color">
