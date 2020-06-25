@@ -10,17 +10,19 @@ export function App({ colores }) {
 
   return (
     <Layout>
-      <img onClick={manejarClick} src={modoOscuro ? "/sol.svg" : "/luna.svg"} />
+      <img
+        onClick={manejarClick}
+        src={modoOscuro ? "/sol.svg" : "/luna.svg"}
+        alt={modoOscuro ? "modo-diurno" : "modo-nocturno"}
+      />
       <div className="contenedor">
         <header>
           <h2>cien colores random nombrados por gente random</h2>
           <p>
-            <a href="https://colornames-feed.vercel.app/">recargá</a> la página
-            para ir viendo los nuevos colores
+            la gente le pone nombre a los colores en{" "}
+            <a href="https://colornames.org/">colornames.org</a>
           </p>
-          <p>
-            visitá <a href="https://colornames.org/">colornames.org</a>
-          </p>
+          <p>estos son los últimos 100 que nombraron:</p>
         </header>
 
         {colores.map((color) => {

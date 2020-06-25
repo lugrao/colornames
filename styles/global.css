@@ -29,11 +29,12 @@ a:visited {
 
 header {
   justify-self: start;
-  padding-bottom: 30px;
 }
+
 header p {
   font-size: 13px;
   font-style: italic;
+  margin-top: 50px;
 }
 
 .color {
