@@ -24,7 +24,6 @@ export function App({ colores }) {
           </p>
           <p>estos son los últimos 100 que nombraron:</p>
         </header>
-
         {colores.map((color) => {
           return (
             <div className="color">
@@ -36,7 +35,18 @@ export function App({ colores }) {
             </div>
           );
         })}
+        <hr />
+        <footer>
+          <p>¡se terminaron los colores! </p>
+          <p>
+            {" "}
+            <a href="https://ciencoloresnombrados.vercel.app/">recargá</a> la
+            página para ver si hay alguno nuevo
+          </p>
+          <p>o andá a contarle a tus nietos lo que viste</p>
+        </footer>
       </div>
+
       {modoOscuro && (
         <style global jsx>{`
           body {
