@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 export function App({ colores }) {
   return (
     <Layout>
+      <h3>cien colores random nombrados por gente random</h3>
       <div className="texto">
         <p className="recargar">
           <i>recargá la página para ir viendo los nuevos colores</i>
