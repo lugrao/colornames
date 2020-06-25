@@ -16,7 +16,7 @@ export function App({ colores }) {
       {colores.map((color) => {
         return (
           <div className="color">
-            <p className="color-name">{color.name}</p>{" "}
+            <p className="color-name">{color.name}</p>
             <div
               className="color-hex"
               style={{ backgroundColor: "#" + color.hexCode }}
