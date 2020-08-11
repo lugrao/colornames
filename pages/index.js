@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import Link from "next/link";
 import { useState } from "react";
 
 export function App({ colores }) {
@@ -41,14 +40,8 @@ export function App({ colores }) {
           <p>¡se terminaron los colores! </p>
           <p>
             {" "}
-            <Link href="/">
-              <a
-              // href="https://ciencoloresnombrados.vercel.app/"
-              >
-                recargá
-              </a>
-            </Link>{" "}
-            la página para ver si hay alguno nuevo
+            <a href="/">recargá</a> la
+            página para ver si hay alguno nuevo
           </p>
           <p>o andá a contarle a tus nietos lo que viste</p>
         </footer>
