@@ -1,8 +1,10 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
+import useSwr from "swr";
 
 export function App({ colores }) {
   const [modoOscuro, setModoOscuro] = useState(false);
+  const [enVivo, setEnVivo] = useState(true);
 
   function manejarClick() {
     setModoOscuro(!modoOscuro);
@@ -23,6 +25,18 @@ export function App({ colores }) {
             <a href="https://colornames.org/">colornames.org</a>
           </p>
           <p>estos son los últimos 100 que nombraron:</p>
+          <div className="en-vivo">
+            <label for="en-vivo">en vivo</label>
+            <input
+              type="checkbox"
+              id="en-vivo"
+              name="en-vivo"
+              checked={enVivo}
+              onClick={() => {
+                setEnVivo(!enVivo);
+              }}
+            />
+          </div>
         </header>
         {colores.map((color) => {
           return (
@@ -40,8 +54,7 @@ export function App({ colores }) {
           <p>¡se terminaron los colores! </p>
           <p>
             {" "}
-            <a href="/">recargá</a> la
-            página para ver si hay alguno nuevo
+            <a href="/">recargá</a> la página para ver si hay alguno nuevo
           </p>
           <p>o andá a contarle a tus nietos lo que viste</p>
         </footer>
@@ -61,6 +74,10 @@ export function App({ colores }) {
           a:visited {
             color: green;
             transition: color 0.2s ease;
+          }
+
+          .en-vivo label {
+            color: #dfdfdf;
           }
         `}</style>
       )}

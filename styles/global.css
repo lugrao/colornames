@@ -32,9 +32,26 @@ header {
 }
 
 header p {
-  font-size: 14px;
+  font-size: 18px;
   font-style: italic;
   margin-top: 40px;
+}
+
+.en-vivo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100px;
+  align-items: end;
+  margin: 20px 0;
+}
+
+.en-vivo label {
+  font-size: 16px;
+  color: #646464;
+}
+
+.en-vivo input {
+  height: 10px;
 }
 
 .color {
