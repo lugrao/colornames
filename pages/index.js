@@ -61,9 +61,9 @@ export function App({ dataInicial }) {
             />
           </div> */}
         </header>
-        {colores.map((color) => {
+        {colores.map((color, index) => {
           return (
-            <div className="color">
+            <div className="color" key={index}>
               <p className="color-name">{color.name}</p>
               <div
                 className="color-hex"
