@@ -1,10 +1,33 @@
 import Layout from "../components/Layout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useSwr from "swr";
 
-export function App({ colores }) {
+// const proxyurl = "https://cors-anywhere.herokuapp.com/";
+// const url = "https://colornames.org/fresh/json/";
+// const fetcher = (url) =>
+//   fetch(url)
+//     .then((response) => response.text())
+//     .then((contents) => console.log(contents))
+//     .catch(() =>
+//       console.log("Can’t access " + url + " response. Blocked by browser?")
+//     );
+
+// const fetcher = (url) => fetch(url).then((res) => res.json());
+
+export function App({ dataInicial }) {
   const [modoOscuro, setModoOscuro] = useState(false);
   const [enVivo, setEnVivo] = useState(true);
+  const [colores, setColores] = useState(dataInicial);
+  // const { data, error, revalidate } = useSwr(proxyurl + url, fetcher, {
+  //   refreshInterval: 1,
+  // });
+
+  // useEffect(() => {
+  //   if (data) {
+  //     setColores(data);
+  //     console.log(data)
+  //   }
+  // }, [data]);
 
   function manejarClick() {
     setModoOscuro(!modoOscuro);
@@ -25,7 +48,7 @@ export function App({ colores }) {
             <a href="https://colornames.org/">colornames.org</a>
           </p>
           <p>estos son los últimos 100 que nombraron:</p>
-          <div className="en-vivo">
+          {/* <div className="en-vivo">
             <label for="en-vivo">en vivo</label>
             <input
               type="checkbox"
@@ -36,7 +59,7 @@ export function App({ colores }) {
                 setEnVivo(!enVivo);
               }}
             />
-          </div>
+          </div> */}
         </header>
         {colores.map((color) => {
           return (
@@ -88,7 +111,7 @@ export function App({ colores }) {
 App.getInitialProps = async (ctx) => {
   const res = await fetch("https://colornames.org/fresh/json/");
   const json = await res.json();
-  return { colores: json };
+  return { dataInicial: json };
 };
 
 export default App;

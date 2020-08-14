@@ -42,7 +42,7 @@ header p {
   grid-template-columns: 1fr 1fr;
   width: 100px;
   align-items: end;
-  margin: 20px 0;
+  margin: 20px 0 5px;
 }
 
 .en-vivo label {
