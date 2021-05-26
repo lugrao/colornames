@@ -1,10 +1,9 @@
 import Layout from "../components/Layout"
 import useState from "react"
-import estiloOscuro from "../styles/oscuro"
 
 export function App({ colores }) {
   const [modoOscuro, setModoOscuro] = useState(false)
-
+  
   function manejarClick() {
     setModoOscuro(!modoOscuro)
   }
