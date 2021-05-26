@@ -1,9 +1,9 @@
 import Layout from "../components/Layout"
-import useState from "react"
+import { useState } from "react"
 
-export function App({ colores }) {
+function App({ colores }) {
   const [modoOscuro, setModoOscuro] = useState(false)
-  
+
   function manejarClick() {
     setModoOscuro(!modoOscuro)
   }
@@ -73,10 +73,16 @@ export function App({ colores }) {
   )
 }
 
-App.getInitialProps = async () => {
-  const res = await fetch("https://colornames.org/fresh/json/")
-  const json = await res.json()
-  return { colores: json }
+export async function getStaticProps() {
+  try {
+    const res = await fetch("https://colornames.org/fresh/json/")
+    const colores = await res.json()
+    console.log(typeof colores)
+    return { props: { colores } }
+  } catch (error) {
+    console.log("Hubo un error.")
+    console.error(error)
+  }
 }
 
 export default App
