@@ -1,2 +1,2 @@
 # Cien colores nombrados
-Una app ínfima hecha en Next JS. Lo único que hace es mostrar los últimos cien colores que fueron nombrados en [COLORNAMES](https://colornames.org/).
+Una app ínfima hecha en Next JS. Muestra los últimos cien colores que fueron nombrados en [COLORNAMES](https://colornames.org/).
