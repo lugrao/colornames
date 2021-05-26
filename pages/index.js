@@ -1,5 +1,6 @@
 import Layout from "../components/Layout"
 import useState from "react"
+import estiloOscuro from "../styles/oscuro"
 
 export function App({ colores }) {
   const [modoOscuro, setModoOscuro] = useState(false)
@@ -47,25 +48,7 @@ export function App({ colores }) {
       </div>
 
       {modoOscuro && (
-        <style global jsx>{`
-          body {
-            transition: background-color 0.2s ease, color 0.2s ease;
-            background-color: black;
-            color: white;
-          }
-          a {
-            color: greenyellow;
-            transition: color 0.2s ease;
-          }
-          a:visited {
-            color: green;
-            transition: color 0.2s ease;
-          }
-
-          .en-vivo label {
-            color: #dfdfdf;
-          }
-        `}</style>
+        <style global jsx>{estiloOscuro}</style>
       )}
     </Layout>
   )
